@@ -1,0 +1,17 @@
+@mixin vexer-hope {
+
+	/*
+	* Vaadin provides an effective way of importing add-on themes but does not 
+	* provide any automatic name-spacing. You should prefix all your 
+	* rules with hope to avoid any conflicts.
+	*/
+
+	.hope-answer {
+		color: green;
+	}
+
+	.hope-title {
+		font-size: 24px;
+		font-weight: stronger;
+	}
+}
