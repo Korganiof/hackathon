@@ -1,12 +1,19 @@
 package fi.utu.ville.exercises.hope;
 
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Button.ClickListener;
+import com.vaadin.ui.FormLayout;
 import com.vaadin.ui.Image;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Layout;
 import com.vaadin.ui.TextField;
+import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.Button.ClickEvent;
+import com.vaadin.ui.Window;
 
 import fi.utu.ville.exercises.helpers.ExerciseExecutionHelper;
+import fi.utu.ville.exercises.hope.jsmap.JsMapStack;
 import fi.utu.ville.exercises.model.ExecutionSettings;
 import fi.utu.ville.exercises.model.ExecutionState;
 import fi.utu.ville.exercises.model.ExecutionStateChangeListener;
@@ -24,13 +31,19 @@ public class HopeExecutor extends VerticalLayout implements
 	 * 
 	 */
 	private static final long serialVersionUID = 2682119786422750060L;
-
+		
 	private final ExerciseExecutionHelper<HopeSubmissionInfo> execHelper =
 
 	new ExerciseExecutionHelper<HopeSubmissionInfo>();
 
 	private final TextField answerField = new TextField();
+	private Button btn;
+	private Button saksa;
+	private Button neuvostoliitto;
+	private Button suomi;
+	
 
+	
 	public HopeExecutor() {
 
 	}
@@ -45,13 +58,50 @@ public class HopeExecutor extends VerticalLayout implements
 	}
 
 	private void doLayout(HopeExerciseData exerciseData, String oldAnswer) {
-		if (exerciseData.getImgFile() != null) {
-			this.addComponent(new Image(null, exerciseData.getImgFile()
-					.getAsResource()));
-		}
+		JsMapStack map = new JsMapStack();
+		this.addComponent(map);
+		btn = new Button("Lisää");		
+		btn.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				
+				Window subWindow = new Window("Sub-window");
+				subWindow.setModal(true);
+
+		        VerticalLayout subContent = new VerticalLayout();
+		        subContent.setMargin(true);
+		        
+		        subWindow.setContent(subContent);
+		        
+		        saksa = new Button("Saksa");
+		        saksa.addClickListener(new ClickListener() {
+
+					@Override
+					public void buttonClick(ClickEvent event) {
+						
+						
+					}
+				});
+		        neuvostoliitto = new Button("Neuvostoliitto");
+		        suomi = new Button("Suomi");
+		        
+		        subContent.addComponent(saksa);
+		        subContent.addComponent(neuvostoliitto);
+		        subContent.addComponent(suomi);
+		        
+		        
+		        getUI().addWindow(subWindow);
+	
+				
+			}
+		});
+
 		this.addComponent(new Label(exerciseData.getQuestion()));
 		answerField.setValue(oldAnswer);
-		this.addComponent(answerField);
+		this.addComponent(btn);
+
+	
 	}
 
 	@Override
