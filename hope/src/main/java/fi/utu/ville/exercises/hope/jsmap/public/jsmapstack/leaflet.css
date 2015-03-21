@@ -1,49 +1,4 @@
-@mixin vexer-hope {
-
-	/*
-	* Vaadin provides an effective way of importing add-on themes but does not 
-	* provide any automatic name-spacing. You should prefix all your 
-	* rules with hope to avoid any conflicts.
-	*/
-
-	.hope-answer {
-		color: green;
-	}
-
-	.hope-title {
-		font-size: 24px;
-		font-weight: stronger;
-	}
-	
-	
-	
-	#map {
-	    width: 600px;
-	    height: 500px;
-	}
-	path {
-	    fill: #000;
-	    fill-opacity: 0;
-	    stroke: #fff;
-	    stroke-width: 0;
-	}
-	path:hover {
-	    fill-opacity: .1;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/* required styles */
+/* required styles */
 
 .leaflet-map-pane,
 .leaflet-tile,
@@ -323,12 +278,12 @@
 	border-radius: 5px;
 	}
 .leaflet-control-layers-toggle {
-	background-image: url(VAADIN/themes/vexer-hope/images/layers.png);
+	background-image: url(images/layers.png);
 	width: 36px;
 	height: 36px;
 	}
 .leaflet-retina .leaflet-control-layers-toggle {
-	background-image: url(VAADIN/themes/vexer-hope/images/layers-2x.png);
+	background-image: url(images/layers-2x.png);
 	background-size: 26px 26px;
 	}
 .leaflet-touch .leaflet-control-layers-toggle {
@@ -534,37 +489,4 @@ path {
 }
 path:hover {
     fill-opacity: .1;
-}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

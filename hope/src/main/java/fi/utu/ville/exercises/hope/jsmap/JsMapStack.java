@@ -7,8 +7,7 @@ import org.json.JSONObject;
 import com.vaadin.ui.AbstractJavaScriptComponent;
 import com.vaadin.ui.JavaScriptFunction;
 
-@com.vaadin.annotations.JavaScript({ "public/jsmapstack/jquery-1.11.2.js", 
-    "public/jsmapstack/maps.js", "public/initMaps.js" })
+@com.vaadin.annotations.JavaScript({"public/initMaps.js" })
 
 public class JsMapStack extends AbstractJavaScriptComponent {
 	
