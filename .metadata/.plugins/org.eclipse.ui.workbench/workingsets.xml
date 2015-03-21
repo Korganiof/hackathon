@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1426925635217_0" label="hope-ville" name="hope-ville">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hope-stub" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hope-ville" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hope" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1426927506313_1" label="Window Working Set" name="Aggregate for window 1426927506313"/>
+</workingSetManager>

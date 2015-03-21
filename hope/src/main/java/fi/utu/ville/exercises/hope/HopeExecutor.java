@@ -39,8 +39,10 @@ public class HopeExecutor extends VerticalLayout implements
 	private final TextField answerField = new TextField();
 	private Button btn;
 	private Button saksa;
-	private Button neuvostoliitto;
+	//private Button neuvostoliitto;
 	private Button suomi;
+	private Button testi;
+
 	
 
 	
@@ -71,7 +73,6 @@ public class HopeExecutor extends VerticalLayout implements
 
 		        VerticalLayout subContent = new VerticalLayout();
 		        subContent.setMargin(true);
-		        
 		        subWindow.setContent(subContent);
 		        
 		        saksa = new Button("Saksa");
@@ -79,18 +80,21 @@ public class HopeExecutor extends VerticalLayout implements
 
 					@Override
 					public void buttonClick(ClickEvent event) {
-						
+						//todo mitä tapahtu kun painaa nappia "Saksa" 
 						
 					}
 				});
-		        neuvostoliitto = new Button("Neuvostoliitto");
+		        // Tässä lisätään modalin / popup windowin sisältö
+		        //neuvostoliitto = new Button("Neuvostoliitto");
 		        suomi = new Button("Suomi");
-		        
+		        testi = new Button("Testi");
+		        Label answer = new Label("Mikä näistä maista hävisi toisen maailmansodan?");
+		        subContent.addComponent(answer);	
 		        subContent.addComponent(saksa);
-		        subContent.addComponent(neuvostoliitto);
+		        //subContent.addComponent(neuvostoliitto);
 		        subContent.addComponent(suomi);
-		        
-		        
+		        subContent.addComponent(testi);
+
 		        getUI().addWindow(subWindow);
 	
 				
